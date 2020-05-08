@@ -113,7 +113,6 @@
                 <Style>None</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
@@ -136,8 +135,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>9.38956in</Left>
+            <Top>0.0875in</Top>
+            <Left>9.58956in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>3</ZIndex>
@@ -168,8 +167,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>9.63828in</Left>
+            <Top>0.0875in</Top>
+            <Left>9.83828in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>4</ZIndex>
@@ -200,8 +199,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>9.8995in</Left>
+            <Top>0.0875in</Top>
+            <Left>10.0995in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>5</ZIndex>
@@ -232,8 +231,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>10.14822in</Left>
+            <Top>0.0875in</Top>
+            <Left>10.34822in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>6</ZIndex>
@@ -264,8 +263,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>10.39694in</Left>
+            <Top>0.0875in</Top>
+            <Left>10.59694in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>7</ZIndex>
@@ -296,8 +295,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>10.64566in</Left>
+            <Top>0.0875in</Top>
+            <Left>10.84566in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>8</ZIndex>
@@ -328,8 +327,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>10.89438in</Left>
+            <Top>0.0875in</Top>
+            <Left>11.09438in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>9</ZIndex>
@@ -360,8 +359,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.1125in</Top>
-            <Left>11.1431in</Left>
+            <Top>0.0875in</Top>
+            <Left>11.3431in</Left>
             <Height>0.65299cm</Height>
             <Width>0.6cm</Width>
             <ZIndex>10</ZIndex>
@@ -435,7 +434,7 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
@@ -450,7 +449,6 @@
                 <Style>None</Style>
               </Border>
               <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
               <PaddingTop>2pt</PaddingTop>
               <PaddingBottom>2pt</PaddingBottom>
             </Style>

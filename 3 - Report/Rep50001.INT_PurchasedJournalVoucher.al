@@ -12,7 +12,7 @@ report 50001 "INT_Purchased Journal Voucher"
         dataitem(Group; "G/L Entry")
         {
             DataItemTableView = SORTING("Document No.", "Posting Date");
-            RequestFilterFields = "Document No.", "Posting Date";
+            RequestFilterFields = "Document No.", "Posting Date", "Source Code";
             column(DocumentNo_Group; Group."Document No.")
             {
             }
@@ -233,7 +233,8 @@ report 50001 "INT_Purchased Journal Voucher"
                         if PurchInvHeader."Buy-from Vendor Name" = '' then
                             VendName := PurchInvHeader."Buy-from Vendor No." + ' - ' + PurchInvHeader."Buy-from Vendor Name 2"
                         else
-                            VendName := PurchInvHeader."Buy-from Vendor No." + ' - ' + PurchInvHeader."Buy-from Vendor Name";
+                            VendName := PurchInvHeader."Buy-from Vendor No." + ' - ' + PurchInvHeader."Buy-from Vendor Name"
+                                                                             + ' - ' + PurchInvHeader."Buy-from Vendor Name 2";
                         VendDoc := PurchInvHeader."Vendor Invoice No.";
 
                         if PurchInvHeader."Currency Factor" <> 0 then begin
@@ -252,7 +253,8 @@ report 50001 "INT_Purchased Journal Voucher"
                             if PurchCRHeader."Buy-from Vendor Name" = '' then
                                 VendName := PurchCRHeader."Buy-from Vendor No." + ' - ' + PurchCRHeader."Buy-from Vendor Name 2"
                             else
-                                VendName := PurchCRHeader."Buy-from Vendor No." + ' - ' + PurchCRHeader."Buy-from Vendor Name";
+                                VendName := PurchCRHeader."Buy-from Vendor No." + ' - ' + PurchCRHeader."Buy-from Vendor Name"
+                                                                                + ' - ' + PurchCRHeader."Buy-from Vendor Name 2";
                             VendDoc := PurchCRHeader."Vendor Cr. Memo No.";
 
                             if PurchCRHeader."Currency Factor" <> 0 then begin
@@ -388,7 +390,8 @@ report 50001 "INT_Purchased Journal Voucher"
             dataitem("WHT Entry"; "AVF_WHT Entry")
             {
                 DataItemLink = "Document No." = FIELD("Document No.");
-                DataItemTableView = SORTING("WHT Bus. Posting Group", "WHT Prod. Posting Group", "Posting Date", Settled) WHERE("Document Type" = FILTER(Invoice));
+                //DataItemTableView = SORTING("WHT Bus. Posting Group", "WHT Prod. Posting Group", "Posting Date", Settled) WHERE("Document Type" = FILTER(Invoice));
+                DataItemTableView = SORTING("WHT Bus. Posting Group", "WHT Prod. Posting Group", "Posting Date", Settled) WHERE("Document Type" = FILTER(Invoice | "Credit Memo"));
                 column(WHTProdPostingGroup_WHTEntry; "WHT Entry"."WHT Prod. Posting Group")
                 {
                 }

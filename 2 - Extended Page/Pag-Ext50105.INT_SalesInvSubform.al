@@ -38,6 +38,10 @@ pageextension 50105 "INT_Sales Inv Subform" extends "Sales Invoice Subform"
         {
             Visible = false;
         }
+        modify("AVF_Description 2")
+        {
+            Visible = false;
+        }
         addafter("AVF_VAT Bus. Posting Group")
         {
             field("INT_Depreciation Book Code"; "Depreciation Book Code")
@@ -82,5 +86,27 @@ pageextension 50105 "INT_Sales Inv Subform" extends "Sales Invoice Subform"
     }
     actions
     {
+        addafter("&Line")
+        {
+            group("INT_DimensionsGroup")
+            {
+                Caption = 'Dimensions';
+                action("INT_Dimensions")
+                {
+                    AccessByPermission = TableData Dimension = R;
+                    ApplicationArea = Dimensions;
+                    Caption = 'Dimensions';
+                    Image = Dimensions;
+                    Scope = Repeater;
+                    ShortCutKey = 'Alt+D';
+                    ToolTip = 'View or edit dimensions, such as area, project, or department, that you can assign to sales and purchase documents to distribute costs and analyze transaction history.';
+
+                    trigger OnAction()
+                    begin
+                        ShowDimensions;
+                    end;
+                }
+            }
+        }
     }
 }

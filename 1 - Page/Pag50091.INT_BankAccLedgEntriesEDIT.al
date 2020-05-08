@@ -36,7 +36,7 @@ page 50091 "INT_BankAccLedgEntriesEDIT"
                 field("Document No."; "Document No.")
                 {
                     ApplicationArea = Basic, Suite;
-                    Editable = false;
+                    Editable = true;
                     ToolTip = 'Specifies the document number on the bank account entry.';
                 }
                 field("Bank Account No."; "Bank Account No.")

@@ -20,14 +20,17 @@ pageextension 50021 "INT_Company Infor" extends "Company Information"
         {
             Visible = false;
         }
+        /*
         modify("Post Code")
         {
-            Visible = false;
+            Visible = true;
         }
+        */
         modify("Country/Region Code")
         {
             Visible = false;
         }
+
     }
 
     actions

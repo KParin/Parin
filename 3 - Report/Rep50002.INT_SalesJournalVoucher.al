@@ -13,7 +13,7 @@ report 50002 "INT_Sales Journal Voucher"
         {
             //DataItemTableView = SORTING("Document No.","Source Code") WHERE(Amount=FILTER(<>0));
             DataItemTableView = where(Amount = filter(<> 0));
-            RequestFilterFields = "Document No.", "Posting Date";
+            RequestFilterFields = "Document No.", "Posting Date", "Source Code";
             column(CompanyInfoName; CompanyInfo.Name)
             {
             }

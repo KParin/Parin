@@ -75,7 +75,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -112,7 +111,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -149,7 +147,6 @@
                                 <TextRun>
                                   <Value>Begining</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -196,7 +193,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!Net_ChangeCaption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -243,7 +239,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!BalanceCaption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -359,7 +354,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -392,7 +386,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -425,7 +418,6 @@
                                 <TextRun>
                                   <Value xml:space="preserve">            </Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -459,7 +451,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -493,7 +484,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -527,7 +517,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -560,7 +549,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -593,7 +581,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -814,7 +801,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!G_L_Account___No__Caption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -852,7 +838,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!PADSTR_____G_L_Account__Indentation___2___G_L_Account__NameCaption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -890,7 +875,6 @@
                                 <TextRun>
                                   <Value>Debit</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -930,7 +914,6 @@
                                 <TextRun>
                                   <Value>Credit</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -970,7 +953,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!G_L_Account___Net_Change_Caption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1010,7 +992,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!G_L_Account___Net_Change__Control22Caption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1050,7 +1031,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!G_L_Account___Balance_at_Date_Caption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1090,7 +1070,6 @@
                                 <TextRun>
                                   <Value>=First(Fields!G_L_Account___Balance_at_Date__Control24Caption.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1199,7 +1178,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1230,7 +1208,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1261,7 +1238,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1291,7 +1267,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1321,7 +1296,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1354,7 +1328,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1387,7 +1360,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1420,7 +1392,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1638,7 +1609,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1670,7 +1640,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1700,7 +1669,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1729,7 +1697,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1758,7 +1725,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1788,7 +1754,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1817,7 +1782,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -1847,7 +1811,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2061,7 +2024,6 @@
                                 <TextRun>
                                   <Value>=Fields!G_L_Account___No__.Value</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                   </Style>
@@ -2093,7 +2055,6 @@
                                 <TextRun>
                                   <Value>=Fields!PADSTR_____G_L_Account__Indentation___2___G_L_Account__Name.Value</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                   </Style>
@@ -2123,7 +2084,6 @@
                                 <TextRun>
                                   <Value>=Fields!StartBalanceDr.Value</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>#,0.00;(#,0.00);''</Format>
@@ -2157,7 +2117,6 @@
                                 <TextRun>
                                   <Value>=Fields!StartBalanceCr.Value</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>#,0.00;(#,0.00);''</Format>
@@ -2191,7 +2150,6 @@
                                 <TextRun>
                                   <Value>=Code.BlankNegAndZero(Fields!G_L_Account___Net_Change_.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>=Fields!G_L_Account___Net_Change_Format.Value</Format>
@@ -2222,7 +2180,6 @@
                                 <TextRun>
                                   <Value>=Code.BlankNegAndZero(Fields!G_L_Account___Net_Change__Control22.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>=Fields!G_L_Account___Net_Change__Control22Format.Value</Format>
@@ -2253,7 +2210,6 @@
                                 <TextRun>
                                   <Value>=Code.BlankNegAndZero(Fields!G_L_Account___Balance_at_Date_.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>=Fields!G_L_Account___Balance_at_Date_Format.Value</Format>
@@ -2284,7 +2240,6 @@
                                 <TextRun>
                                   <Value>=Code.BlankNegAndZero(Fields!G_L_Account___Balance_at_Date__Control24.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>=Fields!G_L_Account___Balance_at_Date__Control24Format.Value</Format>
@@ -2521,7 +2476,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2557,7 +2511,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2587,7 +2540,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2616,7 +2568,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2645,7 +2596,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2675,7 +2625,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2705,7 +2654,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2735,7 +2683,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2949,7 +2896,6 @@
                                 <TextRun>
                                   <Value>total</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -2993,7 +2939,6 @@
                                 <TextRun>
                                   <Value />
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                   </Style>
                                 </TextRun>
@@ -3035,7 +2980,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!BalDr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <Format>#,0.00;-#,0.00;''</Format>
                                   </Style>
@@ -3078,7 +3022,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!BalCr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>=IIF(Fields!G_L_Account___Account_Type_.Value&lt;&gt;"0","Bold","Normal")</FontWeight>
                                     <Format>#,0.00;-#,0.00;''</Format>
@@ -3122,7 +3065,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!SumNetDr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <Format>=Fields!G_L_Account___Net_Change_Format.Value</Format>
                                   </Style>
@@ -3165,7 +3107,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!SumNetCr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <Format>=Fields!G_L_Account___Net_Change__Control22Format.Value</Format>
                                   </Style>
@@ -3208,7 +3149,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!SumBalDr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <Format>=Fields!G_L_Account___Balance_at_Date_Format.Value</Format>
                                   </Style>
@@ -3249,7 +3189,6 @@
                                 <TextRun>
                                   <Value>=LAST(Fields!SumBalCr.Value)</Value>
                                   <Style>
-                                    <FontFamily>Tahoma</FontFamily>
                                     <FontSize>7pt</FontSize>
                                     <Format>=Fields!G_L_Account___Balance_at_Date__Control24Format.Value</Format>
                                   </Style>
@@ -3541,6 +3480,9 @@
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
+                          <Visibility>
+                            <Hidden>=IIF((Fields!ShowAll.Value = FALSE) AND (Fields!StartBalanceDr.Value = 0) AND (Fields!StartBalanceCr.Value = 0) AND (Fields!G_L_Account___Net_Change_.Value = 0) AND (Fields!G_L_Account___Net_Change__Control22.Value = 0) AND (Fields!G_L_Account___Balance_at_Date_.Value = 0) AND (Fields!G_L_Account___Balance_at_Date__Control24.Value = 0),TRUE,FALSE)</Hidden>
+                          </Visibility>
                           <DataElementName>Detail_Collection</DataElementName>
                           <DataElementOutput>Output</DataElementOutput>
                           <KeepTogether>true</KeepTogether>
@@ -3551,6 +3493,9 @@
                       <KeepWithGroup>Before</KeepWithGroup>
                     </TablixMember>
                   </TablixMembers>
+                  <Visibility>
+                    <Hidden>=IIF((Fields!HideNoTransAcc.Value) AND (Fields!StartBalanceDr.Value = 0) AND (Fields!StartBalanceCr.Value = 0) AND (Fields!G_L_Account___Net_Change_.Value = 0) AND (Fields!G_L_Account___Net_Change__Control22.Value = 0) AND (Fields!G_L_Account___Balance_at_Date_.Value = 0) AND (Fields!G_L_Account___Balance_at_Date__Control24.Value = 0),TRUE,FALSE)</Hidden>
+                  </Visibility>
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
@@ -3605,7 +3550,6 @@
                   <TextRun>
                     <Value>=First(Fields!G_L_Account__TABLECAPTION__________GLFilter.Value)</Value>
                     <Style>
-                      <FontFamily>Tahoma</FontFamily>
                       <FontSize>8pt</FontSize>
                     </Style>
                   </TextRun>
@@ -3644,21 +3588,18 @@
                     <TextRun>
                       <Value>=ReportItems!CurrReport_PAGENOCaption.Value</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value> : </Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=Globals!PageNumber</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3684,7 +3625,6 @@
                     <TextRun>
                       <Value>=ReportItems!COMPANYNAME.Value</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -3711,7 +3651,6 @@
                     <TextRun>
                       <Value>=ReportItems!PeriodText.Value</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <Color>#ffff00</Color>
                       </Style>
                     </TextRun>
@@ -3739,7 +3678,6 @@
                     <TextRun>
                       <Value>=ReportItems!Trial_BalanceCaption.Value</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -3769,7 +3707,6 @@
                     <TextRun>
                       <Value>=ReportItems!STRSUBSTNO_Text000_PeriodText_.Value</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3794,7 +3731,6 @@
                     <TextRun>
                       <Value>Print Date : </Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <Format>g</Format>
                       </Style>
@@ -3802,7 +3738,6 @@
                     <TextRun>
                       <Value>=First(Fields!PrintDate.Value, "DataSet_Result")</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <Format>g</Format>
                       </Style>
@@ -3810,7 +3745,6 @@
                     <TextRun>
                       <Value xml:space="preserve"> </Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                         <Format>g</Format>
                       </Style>
@@ -3838,14 +3772,12 @@
                     <TextRun>
                       <Value>User : </Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
                     <TextRun>
                       <Value>=User!UserID</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontSize>8pt</FontSize>
                       </Style>
                     </TextRun>
@@ -3872,7 +3804,6 @@
                     <TextRun>
                       <Value>=First(Fields!STRSUBSTNO_Text000_PeriodText_.Value, "DataSet_Result")</Value>
                       <Style>
-                        <FontFamily>Tahoma</FontFamily>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -3958,14 +3889,20 @@
   <DataSets>
     <DataSet Name="DataSet_Result">
       <Fields>
+        <Field Name="HideNoTransAccLayout">
+          <DataField>HideNoTransAccLayout</DataField>
+        </Field>
+        <Field Name="HideNoTransAcc">
+          <DataField>HideNoTransAcc</DataField>
+        </Field>
+        <Field Name="ShowAll">
+          <DataField>ShowAll</DataField>
+        </Field>
         <Field Name="STRSUBSTNO_Text000_PeriodText_">
           <DataField>STRSUBSTNO_Text000_PeriodText_</DataField>
         </Field>
         <Field Name="PrintDate">
           <DataField>PrintDate</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
         </Field>
         <Field Name="COMPANYNAME">
           <DataField>COMPANYNAME</DataField>

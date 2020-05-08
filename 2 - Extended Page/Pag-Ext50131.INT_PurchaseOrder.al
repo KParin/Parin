@@ -61,6 +61,8 @@ pageextension 50131 "INT_Purchase Order" extends "Purchase Order"
         {
             Visible = false;
         }
+
+
         modify("Purchaser Code")
         {
             Visible = false;
@@ -284,6 +286,25 @@ pageextension 50131 "INT_Purchase Order" extends "Purchase Order"
 
     actions
     {
+        modify(Post)
+        {
+            trigger OnAfterAction()
+            var
+                PurchRcptH: Record "Purch. Rcpt. Header";
+                DocNo: code[20];
+                PosPurchReceipt: Page "Posted Purchase Receipt";
+            begin
+                Clear(DocNo);
+                DocNo := Rec."No.";
+                Clear(PurchRcptH);
+                PurchRcptH.SetRange("Order No.", DocNo);
+                if PurchRcptH.FindFirst then begin
+                    PosPurchReceipt.SetRecord(PurchRcptH);
+                    PosPurchReceipt.SetTableView(PurchRcptH);
+                    PosPurchReceipt.Run();
+                end;
+            end;
+        }
         modify("Create Inventor&y Put-away/Pick")
         {
             Promoted = false;
@@ -388,6 +409,7 @@ pageextension 50131 "INT_Purchase Order" extends "Purchase Order"
                 end;
             end;
         }
+
 
 
     }

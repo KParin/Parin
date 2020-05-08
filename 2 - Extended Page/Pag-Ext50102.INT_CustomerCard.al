@@ -224,6 +224,8 @@ pageextension 50102 "INT_Customer Card" extends "Customer Card"
         {
             Visible = false;
         }
+
+
     }
     actions
     {

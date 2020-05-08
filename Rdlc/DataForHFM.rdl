@@ -425,6 +425,9 @@
         <Field Name="GLAccNoAndDepCode">
           <DataField>GLAccNoAndDepCode</DataField>
         </Field>
+        <Field Name="GLAccNo">
+          <DataField>GLAccNo</DataField>
+        </Field>
         <Field Name="SCC">
           <DataField>SCC</DataField>
         </Field>
@@ -535,6 +538,9 @@
         </Field>
         <Field Name="Net_ChangeFormat">
           <DataField>Net_ChangeFormat</DataField>
+        </Field>
+        <Field Name="CountAccount">
+          <DataField>CountAccount</DataField>
         </Field>
         <Field Name="DimValue_Site_Code">
           <DataField>DimValue_Site_Code</DataField>

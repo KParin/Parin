@@ -120,6 +120,12 @@
       "version": "1.0.0.0"
     },
     {
+      "appId": "1c8391c7-d13b-4c10-89fa-0f0276448d41",
+      "publisher": "AVision Co., Ltd",
+      "name": "FN-GL-002",
+      "version": "1.0.0.0"
+    },
+    {
       "appId": "1bbfb11b-6d6c-40a1-a210-5ad90cad25e4",
       "publisher": "AVision Co., Ltd",
       "name": "FN-PO-001",
@@ -135,6 +141,12 @@
       "appId": "a375b829-05a9-4328-a463-ceec84612c43",
       "publisher": "AVision Co., Ltd",
       "name": "FN-AR-002",
+      "version": "1.0.0.0"
+    },
+    {
+      "appId": "5b7cf897-8c0a-458d-88c6-b6714b22d2a4",
+      "publisher": "AVision Co., Ltd",
+      "name": "FN-AR-003",
       "version": "1.0.0.0"
     },
     {

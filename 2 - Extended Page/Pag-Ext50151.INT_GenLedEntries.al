@@ -58,6 +58,7 @@ pageextension 50151 "INT_Gen Led Entries" extends "General Ledger Entries"
                 ApplicationArea = All;
             }
         }
+
     }
 
     actions

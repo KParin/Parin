@@ -41,6 +41,13 @@ pageextension 50126 "INT_Chart of Accounts" extends "Chart of Accounts"
                 ApplicationArea = all;
             }
         }
+        addafter(Balance)
+        {
+            field("INT_Budgeted Amount"; "Budgeted Amount")
+            {
+                ApplicationArea = all;
+            }
+        }
     }
     actions
     {

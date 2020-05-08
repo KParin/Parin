@@ -793,6 +793,9 @@
                           <Value>=Fields!GLAccNo_.Value</Value>
                         </SortExpression>
                       </SortExpressions>
+                      <Visibility>
+                        <Hidden>=IIF((Fields!NetChangeShow.Value = 0) AND (Fields!BudgetAmount.Value = 0) or (Fields!CountInteger.Value &lt; Fields!GLDateFilterStart.Value),TRUE,FALSE)</Hidden>
+                      </Visibility>
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
@@ -802,7 +805,7 @@
             <Top>0cm</Top>
             <Left>0.44662cm</Left>
             <Height>1.2cm</Height>
-            <Width>19.0475cm</Width>
+            <Width>19.04749cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -927,6 +930,12 @@
       <Fields>
         <Field Name="CountInteger">
           <DataField>CountInteger</DataField>
+        </Field>
+        <Field Name="GLDateFilter">
+          <DataField>GLDateFilter</DataField>
+        </Field>
+        <Field Name="GLDateFilterStart">
+          <DataField>GLDateFilterStart</DataField>
         </Field>
         <Field Name="DimValueCode">
           <DataField>DimValueCode</DataField>

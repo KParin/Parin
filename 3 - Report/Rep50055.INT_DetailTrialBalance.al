@@ -137,7 +137,9 @@ report 50055 "INT_Detail Trial Balance"
                     column(Global_Dimension_2_Code; "Global Dimension 2 Code")
                     {
                     }
-
+                    column(User_ID; "User ID")
+                    {
+                    }
                     trigger OnAfterGetRecord()
                     begin
                         if PrintOnlyCorrections then
@@ -158,6 +160,12 @@ report 50055 "INT_Detail Trial Balance"
                             ClosingEntry := true
                         else
                             ClosingEntry := false;
+
+                        Clear(DimensionValueTB);
+                        DimensionValueTB.SetCurrentKey("Dimension Code", Code);
+                        DimensionValueTB.SetRange("Dimension Code", 'COST CENTER');
+                        DimensionValueTB.SetRange(Code, "Global Dimension 1 Code");
+                        if DimensionValueTB.FindFirst then;
 
                         CLEAR(NameVC);
                         CLEAR(CustomerTB);
@@ -193,7 +201,35 @@ report 50055 "INT_Detail Trial Balance"
                                 end;
 
 
+                            //AVPKJINT.001 15/01/2020 Add Code
+                            Clear(DimSetEntry);
+                            Clear(DimSetEntry);
+                            DimSetEntry.SetRange("Dimension Set ID", "G/L Entry"."Dimension Set ID");
+                            DimSetEntry.SetRange("Dimension Code", 'CUSTOMER NO.');
+                            if DimSetEntry.FindFirst then begin
+                                IF CustomerTB.GET(DimSetEntry."Dimension Value Code") THEN
+                                    NameVC := CustomerTB.Name;
+                            end else begin
+                                Clear(DimSetEntry);
+                                DimSetEntry.SetRange("Dimension Set ID", "G/L Entry"."Dimension Set ID");
+                                DimSetEntry.SetRange("Dimension Code", 'VENDOR NO.');
+                                if DimSetEntry.FindFirst then begin
+                                    IF VendorTB.GET(DimSetEntry."Dimension Value Code") THEN
+                                        NameVC := VendorTB.Name;
+
+                                end;
+
+                                IF (NameVC = '') AND ("Global Dimension 1 Code" <> '') THEN BEGIN
+                                    NameVC := "Global Dimension 1 Code" + ' : ' + DimensionValueTB.Name;
+                                END;
+                            end;
+                            //C-AVPKJINT.001 15/01/2020
+
+
                         end;
+                        IF (NameVC = '') AND ("Global Dimension 1 Code" <> '') THEN BEGIN
+                            NameVC := "Global Dimension 1 Code" + ' : ' + DimensionValueTB.Name;
+                        END;
                     end;
 
                     trigger OnPreDataItem()
@@ -333,6 +369,7 @@ report 50055 "INT_Detail Trial Balance"
         VendorTB: Record Vendor;
         NameVC: Text[250];
         DimSetEntry: Record "Dimension Set Entry";
+        DimensionValueTB: Record "Dimension Value";
 
 
     procedure InitializeRequest(NewPrintOnlyOnePerPage: Boolean; NewExcludeBalanceOnly: Boolean; NewPrintClosingEntries: Boolean; NewPrintReversedEntries: Boolean; NewPrintOnlyCorrections: Boolean)

@@ -269,7 +269,8 @@ report 50003 "INT_Payment Voucher"
                         if PayTo = '' then begin
                             if GLEntry."Source Type" = GLEntry."Source Type"::Vendor then
                                 if recVendor.GET(GLEntry."Source No.") then
-                                    PayTo := recVendor.Name + ' ' + recVendor."Name 2";
+                                    if CopyStr(recVendor."No.", 1, 9) <> 'Z-ONETIME' then
+                                        PayTo := recVendor.Name + ' ' + recVendor."Name 2";
                         end;
                         //AVWCAVIP 18/03/14
 

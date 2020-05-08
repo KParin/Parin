@@ -95,6 +95,7 @@ pageextension 50127 "INT_Purchase Order Subform" extends "Purchase Order Subform
                 ApplicationArea = All;
             }
         }
+
         movebefore(ShortcutDimCode3; ShortcutDimCode5)
         /*addafter("AVF_WHT Product Posting Group")
         {
@@ -145,6 +146,7 @@ pageextension 50127 "INT_Purchase Order Subform" extends "Purchase Order Subform
         {
             Visible = false;
         }
+
 
     }
     actions

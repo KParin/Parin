@@ -11,15 +11,26 @@ report 50061 "INT_Trial Balance"
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Account Type", "Date Filter", "Global Dimension 1 Filter", "Global Dimension 2 Filter";
 
+            column(HideNoTransAccLayout; HideNoTransAccLayout)
+            {
+            }
+            column(HideNoTransAcc; HideNoTransAcc)
+            {
+            }
+            column(ShowAll; ShowAll)
+            {
+            }
             column(STRSUBSTNO_Text000_PeriodText_; STRSUBSTNO(Text000, PeriodText))
             {
             }
             column(PrintDate; FORMAT(TODAY, 0, 1) + ' ' + FORMAT(TIME, 0, '<Hours12>:<Minutes,2>:<Second,2> <AM/PM>'))
             {
             }
+            /*
             column(CurrReport_PAGENO; CurrReport.PAGENO)
             {
             }
+            */
             column(COMPANYNAME; '')
             {
             }
@@ -227,6 +238,18 @@ report 50061 "INT_Trial Balance"
                 END;
 
                 ChangeGroupNo := "New Page";
+
+                HideNoTransAccLayout := true;
+                if HideNoTransAcc then begin
+                    if (StartBalanceDr = 0) AND (StartBalanceCr = 0)
+                    AND ("G/L Account"."Net Change" = 0) AND (-"G/L Account"."Net Change" = 0)
+                    AND ("G/L Account"."Balance at Date" = 0) AND (-"G/L Account"."Balance at Date" = 0)
+                    then begin
+                        HideNoTransAccLayout := false;
+                    end;
+                end;
+
+
             end;
 
 
@@ -245,9 +268,16 @@ report 50061 "INT_Trial Balance"
         {
             area(Content)
             {
-                group(GroupName)
+                group(Options)
                 {
-
+                    field(ShowAll; ShowAll)
+                    {
+                        Caption = 'Show All';
+                    }
+                    field(HideNoTransAcc; HideNoTransAcc)
+                    {
+                        Caption = 'Hide No Transaction Account';
+                    }
                 }
             }
         }
@@ -261,6 +291,7 @@ report 50061 "INT_Trial Balance"
                     ApplicationArea = All;
 
                 }
+
             }
         }
     }
@@ -310,6 +341,7 @@ report 50061 "INT_Trial Balance"
 
 
     var
+        ShowAll: Boolean;
         ExcelBuf: Record "Excel Buffer";
         GLFilter: Text;
         PeriodText: Text[30];
@@ -350,6 +382,8 @@ report 50061 "INT_Trial Balance"
         G_L_Account___Net_Change__Control22CaptionLbl: TextConst ENU = 'Credit';
         G_L_Account___Balance_at_Date_CaptionLbl: TextConst ENU = 'Debit';
         G_L_Account___Balance_at_Date__Control24CaptionLbl: TextConst ENU = 'Credit';
+        HideNoTransAcc: Boolean;
+        HideNoTransAccLayout: Boolean;
 
 
 }

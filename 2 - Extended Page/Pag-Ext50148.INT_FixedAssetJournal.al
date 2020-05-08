@@ -35,6 +35,13 @@ pageextension 50148 "INT_Fixed Asset Journal" extends "Fixed Asset Journal"
             Visible = false;
             Promoted = false;
         }
+
+        modify(Post)
+        {
+            Promoted = false;
+        }
+
+
     }
 
 

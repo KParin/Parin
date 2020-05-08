@@ -16,6 +16,11 @@ page 50088 "INT_AC-BG Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -234,7 +239,7 @@ page 50088 "INT_AC-BG Role Center"
                 Caption = 'Create Master 2';
                 //ToolTip = 'Overview and change system and application settings, and manage extensions and services';
                 //Image = Setup;
-                Visible = false;
+                Visible = true;
 
                 action("Chart of Accounts")
                 {
@@ -567,6 +572,11 @@ page 50088 "INT_AC-BG Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
+                }
                 action("Report Account Receivable")
                 {
                     //ToolTip = 'Setup AppName';
@@ -710,9 +720,17 @@ page 50088 "INT_AC-BG Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
+                }
+                action("INT_Report G/L")
+                {
+                    Caption = 'Report G/L';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('GL'));
                 }
             }
             group("G/L Account")

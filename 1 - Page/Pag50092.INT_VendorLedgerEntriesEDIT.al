@@ -67,7 +67,7 @@ page 50092 "INT_Vendor Ledger Entries EDIT"
                 field(Description; Description)
                 {
                     ApplicationArea = Basic, Suite;
-                    Editable = false;
+                    Editable = true;
                     ToolTip = 'Specifies a description of the vendor entry.';
                 }
                 field("Global Dimension 1 Code"; "Global Dimension 1 Code")
@@ -311,6 +311,11 @@ page 50092 "INT_Vendor Ledger Entries EDIT"
                     ApplicationArea = Dimensions;
                     ToolTip = 'Specifies a reference to a combination of dimension values. The actual values are stored in the Dimension Set Entry table.';
                     Visible = false;
+                }
+                field("INT_Bank DBK Status"; "INT_Bank DBK Status")
+                {
+                    ApplicationArea = Basic, Suite;
+                    Editable = true;
                 }
             }
         }
@@ -625,8 +630,8 @@ page 50092 "INT_Vendor Ledger Entries EDIT"
 
     trigger OnModifyRecord(): Boolean
     begin
-        CODEUNIT.Run(CODEUNIT::"Vend. Entry-Edit", Rec);
-        exit(false);
+        //CODEUNIT.Run(CODEUNIT::"Vend. Entry-Edit", Rec);
+        //exit(false);
     end;
 
     trigger OnOpenPage()

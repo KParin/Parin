@@ -100,8 +100,8 @@ pageextension 50201 "INT_PurchaseInvoice" extends "Purchase Invoice"
         {
             trigger OnAfterValidate()
             begin
-                if "Due Date" < WorkDate then
-                    Error('Due Date must more than Current Date!');
+                if "Due Date" < "Posting Date" then
+                    Error('Due Date must more than Posting Date');
             end;
         }
         addafter("Due Date")
@@ -215,14 +215,6 @@ pageextension 50201 "INT_PurchaseInvoice" extends "Purchase Invoice"
             }
         }
         moveafter("Vendor Invoice No."; "Shortcut Dimension 2 Code")
-        addafter("Shortcut Dimension 2 Code")
-        {
-            field("INT_Posting No."; "Posting No.")
-            {
-                ApplicationArea = All;
-            }
-        }
-
 
     }
 
@@ -277,15 +269,51 @@ pageextension 50201 "INT_PurchaseInvoice" extends "Purchase Invoice"
         {
             Visible = false;
         }
+
+        /*
         modify("&Invoice")
         {
             Visible = false;
         }
+        */
         modify("Re&lease")
         {
             trigger OnAfterAction()
             begin
-                TestField("INT_Cheque Delivery Method");
+                if CopyStr("Buy-from Vendor No.", 1, 9) = 'Z-ONETIME' then begin
+                    TestField("INT_AV Edit Vendor Name");
+                    TestField("INT_Interface One Time");
+                    TestField("INT_Bank Product Code");
+                end;
+                if CopyStr("Buy-from Vendor No.", 1, 11) <> 'Z-PETTYCASH' then begin
+                    TestField("INT_Cheque Delivery Method");
+                end;
+
+
+                Clear(PurchLine);
+                PurchLine.SetCurrentKey("Document Type", "Document No.", "Line No.");
+                PurchLine.SetRange("Document Type", "Document Type");
+                PurchLine.SetRange("Document No.", "No.");
+                PurchLine.SetRange("No.", '0310099');
+                if PurchLine.FindFirst then begin
+                    PurchLine.TestField(Amount, 0);
+                end;
+
+                Clear(PurchLine);
+                PurchLine.SetCurrentKey("Document Type", "Document No.", "Line No.");
+                PurchLine.SetRange("Document Type", "Document Type");
+                PurchLine.SetRange("Document No.", "No.");
+                PurchLine.setrange("No.", '0310099'); //suspense Fixed Asset
+                if PurchLine.FindFirst then begin
+                    Clear(PurchLine);
+                    PurchLine.SetCurrentKey("Document Type", "Document No.", "Line No.");
+                    PurchLine.SetRange("Document Type", "Document Type");
+                    PurchLine.SetRange("Document No.", "No.");
+                    PurchLine.setrange("Type", PurchLine.Type::"Fixed asset"); //suspense Fixed Asset
+                    if Not PurchLine.FindFirst then begin
+                        Error('ระดับ line ต้องมี Fixed Asset อย่างน้อย 1 บรรทัด');
+                    end;
+                end;
             end;
         }
         modify(Post)
@@ -296,11 +324,39 @@ pageextension 50201 "INT_PurchaseInvoice" extends "Purchase Invoice"
             end;
         }
 
+        addafter(Dimensions)
+        {
+            action("INT_CopyDocument")
+            {
+                ApplicationArea = All;
+                Caption = 'Copy Document';
+                //Ellipsis = true;
+                //Enabled = "No." <> '';
+                Promoted = true;
+                PromotedCategory = Process;
+                Visible = true;
+                Image = CopyDocument;
+                //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
+                //PromotedIsBig = true;
+                ToolTip = 'Copy document lines and header information from another purchase document to this document. You can copy a posted purchase invoice into a new purchase invoice to quickly create a similar document.';
+
+                trigger OnAction()
+                begin
+                    CopyPurchDoc.SetPurchHeader(Rec);
+                    CopyPurchDoc.RunModal;
+                    Clear(CopyPurchDoc);
+                    if Get("Document Type", "No.") then;
+                end;
+            }
+        }
+
+
     }
 
 
 
 
     var
-        myInt: Integer;
+        CopyPurchDoc: Report "Copy Purchase Document";
+        PurchLine: Record "Purchase Line";
 }

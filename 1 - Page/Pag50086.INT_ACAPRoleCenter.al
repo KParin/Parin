@@ -16,6 +16,11 @@ page 50086 "INT_AC-AP Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -173,14 +178,22 @@ page 50086 "INT_AC-AP Role Center"
                     ApplicationArea = Basic, Suite;
                 }
             }
-            group("Import ทุน")
+            group("Import file")
             {
-                Caption = 'Import ทุน';
+                Caption = 'Import file';
                 Visible = true;
-                action("import Scholarship")
+                action("Import Scholarship")
                 {
-                    Caption = 'import Scholarship';
+                    Caption = 'Import Scholarship';
                     RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('AP_SCH*'));
+                    ApplicationArea = Basic, Suite;
+                }
+                action("Import EMS")
+                {
+                    Caption = 'Import EMS';
+                    RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('ADVANCE_EMS*'));
                     ApplicationArea = Basic, Suite;
                 }
             }
@@ -418,6 +431,18 @@ page 50086 "INT_AC-AP Role Center"
                     RunPageView = where("Group Report Filter" = const('AP'));
                     Caption = 'Report Account Payable';
                 }
+                action("WHT Orders")
+                {
+                    //ToolTip = 'Setup AppName';
+                    RunObject = Page "AVF_WHT Lists (Open)";
+                    ApplicationArea = Basic, Suite;
+                }
+                action("WHT Orders - Close")
+                {
+                    //ToolTip = 'Setup AppName';
+                    RunObject = Page "AVF_WHT Lists (Close)";
+                    ApplicationArea = Basic, Suite;
+                }
             }
             group("AP Payment")
             {
@@ -448,18 +473,7 @@ page 50086 "INT_AC-AP Role Center"
                     RunPageView = where("Template Type" = const(Payments), Recurring = const(false));
                     Caption = 'Payment Journals';
                 }
-                action("WHT Orders")
-                {
-                    //ToolTip = 'Setup AppName';
-                    RunObject = Page "AVF_WHT Lists (Open)";
-                    ApplicationArea = Basic, Suite;
-                }
-                action("WHT Orders - Close")
-                {
-                    //ToolTip = 'Setup AppName';
-                    RunObject = Page "AVF_WHT Lists (Close)";
-                    ApplicationArea = Basic, Suite;
-                }
+
                 action("Vendor Invoice No.")
                 {
                     //ToolTip = 'Setup AppName';
@@ -566,6 +580,11 @@ page 50086 "INT_AC-AP Role Center"
                     RunObject = Page "Posted Sales Credit Memos";
                     ApplicationArea = Basic, Suite;
 
+                }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
                 }
                 action("Report Account Receivable")
                 {
@@ -710,9 +729,10 @@ page 50086 "INT_AC-AP Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")
@@ -776,6 +796,14 @@ page 50086 "INT_AC-AP Role Center"
                     RunObject = Page "G/L Registers";
                     ApplicationArea = Basic, Suite;
                     Caption = 'G/L Registers';
+                }
+
+                action("INT_Report G/L")
+                {
+                    Caption = 'Report G/L';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('GL'));
                 }
             }
             group(Setup)

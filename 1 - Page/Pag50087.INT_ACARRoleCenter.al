@@ -16,6 +16,11 @@ page 50087 "INT_AC-AR Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -523,6 +528,13 @@ page 50087 "INT_AC-AR Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Depreciation Books")
+                {
+                    //ToolTip = 'Setup AppName';
+                    RunObject = Page "Depreciation Book List";
+                    ApplicationArea = Basic, Suite;
+
+                }
                 action("AR Billing")
                 {
                     //ToolTip = 'Setup AppName';
@@ -566,6 +578,16 @@ page 50087 "INT_AC-AR Role Center"
                     RunObject = Page "Posted Sales Credit Memos";
                     ApplicationArea = Basic, Suite;
 
+                }
+                action("INT_WHT RV EDIT")
+                {
+                    RunObject = Page "INT_WHT RV EDIT";
+                    ApplicationArea = Basic, Suite;
+                }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
                 }
                 action("Report Account Receivable")
                 {
@@ -656,13 +678,6 @@ page 50087 "INT_AC-AR Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
-                action("Depreciation Books")
-                {
-                    //ToolTip = 'Setup AppName';
-                    RunObject = Page "Depreciation Book List";
-                    ApplicationArea = Basic, Suite;
-
-                }
                 action("Report Fixed Asset")
                 {
                     //ToolTip = 'Setup AppName';
@@ -710,9 +725,10 @@ page 50087 "INT_AC-AR Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")
@@ -720,7 +736,7 @@ page 50087 "INT_AC-AR Role Center"
                 Caption = 'G/L Account';
                 //ToolTip = 'XXX';
                 Image = Journals;
-                Visible = false;
+                Visible = true;
 
                 action("G/L Accounts")
                 {
@@ -735,8 +751,8 @@ page 50087 "INT_AC-AR Role Center"
                     RunObject = Page "General Journal Batches";
                     ApplicationArea = Basic, Suite;
                     RunPageView = where("Template Type" = const(General), Recurring = const(false));
-
                 }
+
                 action("Recurring General Journals")
                 {
                     //ToolTip = 'Setup AppName';
@@ -776,6 +792,13 @@ page 50087 "INT_AC-AR Role Center"
                     RunObject = Page "G/L Registers";
                     ApplicationArea = Basic, Suite;
                     Caption = 'G/L Registers';
+                }
+                action("INT_Report G/L")
+                {
+                    Caption = 'Report G/L';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('GL'));
                 }
             }
             group(Setup)

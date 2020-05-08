@@ -11,7 +11,7 @@ report 50057 "INT_Fixed Asset"
         dataitem("Fixed Asset"; "Fixed Asset")
         {
             DataItemTableView = SORTING("No.");
-            RequestFilterFields = "No.", "FA Posting Group", "Global Dimension 1 Code";
+            RequestFilterFields = "No.", "FA Posting Group", "Global Dimension 1 Code", "Global Dimension 2 Code";
 
             column(Com_Name; CompanyInfoTB.FNGN001_NameEng)
             {

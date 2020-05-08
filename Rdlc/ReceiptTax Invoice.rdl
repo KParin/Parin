@@ -25,13 +25,13 @@
                   <Width>0.65055in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.76344in</Width>
+                  <Width>3.21836in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.7874in</Width>
+                  <Width>0.64497in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.7874in</Width>
+                  <Width>0.4749in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.99281in</Width>
@@ -213,7 +213,6 @@
                             </LeftBorder>
                             <BackgroundColor>Silver</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
@@ -256,7 +255,6 @@
                             </LeftBorder>
                             <BackgroundColor>Silver</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                           </Style>
                         </Textbox>
@@ -556,7 +554,6 @@
                             </LeftBorder>
                             <BackgroundColor>Silver</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -1115,7 +1112,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Left</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -1326,7 +1323,6 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox142">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -3139,7 +3135,6 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox26">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -3177,7 +3172,6 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox143">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -3215,7 +3209,6 @@
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox145">
-                          <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
@@ -4228,7 +4221,7 @@
             <DataSetName>DataSet_Result</DataSetName>
             <Left>0.23996in</Left>
             <Height>3.30233in</Height>
-            <Width>7.75693in</Width>
+            <Width>7.75692in</Width>
             <Style>
               <Border>
                 <Style>None</Style>

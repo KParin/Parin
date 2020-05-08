@@ -16,6 +16,11 @@ page 50080 "INT_Intouch Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -170,13 +175,21 @@ page 50080 "INT_Intouch Role Center"
                     ApplicationArea = Basic, Suite;
                 }
             }
-            group("Import ทุน")
+            group("Import file")
             {
-                Caption = 'Import ทุน';
-                action("import Scholarship")
+                Caption = 'Import file';
+                action("Import Scholarship")
                 {
-                    Caption = 'import Scholarship';
+                    Caption = 'Import Scholarship';
                     RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('AP_SCH*'));
+                    ApplicationArea = Basic, Suite;
+                }
+                action("Import EMS")
+                {
+                    Caption = 'Import EMS';
+                    RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('ADVANCE_EMS*'));
                     ApplicationArea = Basic, Suite;
                 }
             }
@@ -557,6 +570,18 @@ page 50080 "INT_Intouch Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("INT_WHT RV EDIT")
+                {
+                    RunObject = Page "INT_WHT RV EDIT";
+                    ApplicationArea = Basic, Suite;
+                }
+
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
+                }
+
                 action("Report Account Receivable")
                 {
                     //ToolTip = 'Setup AppName';
@@ -701,10 +726,10 @@ page 50080 "INT_Intouch Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
-                    Visible = true;
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")
@@ -767,6 +792,13 @@ page 50080 "INT_Intouch Role Center"
                     RunObject = Page "G/L Registers";
                     ApplicationArea = Basic, Suite;
                     Caption = 'G/L Registers';
+                }
+                action("Report G/L")
+                {
+                    //ToolTip = 'Setup AppName';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('GL'));
                 }
             }
             group(Setup)

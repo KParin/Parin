@@ -16,6 +16,11 @@ page 50084 "INT_AC Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -173,14 +178,22 @@ page 50084 "INT_AC Role Center"
                     ApplicationArea = Basic, Suite;
                 }
             }
-            group("Import ทุน")
+            group("Import file")
             {
-                Caption = 'Import ทุน';
+                Caption = 'Import file';
                 Visible = true;
-                action("import Scholarship")
+                action("Import Scholarship")
                 {
-                    Caption = 'import Scholarship';
+                    Caption = 'Import Scholarship';
                     RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('AP_SCH*'));
+                    ApplicationArea = Basic, Suite;
+                }
+                action("Import EMS")
+                {
+                    Caption = 'Import EMS';
+                    RunObject = page "Config. Packages";
+                    RunPageView = where(code = filter('ADVANCE_EMS*'));
                     ApplicationArea = Basic, Suite;
                 }
             }
@@ -424,7 +437,7 @@ page 50084 "INT_AC Role Center"
                 Caption = 'AP Payment';
                 //ToolTip = 'Overview and change system and application settings, and manage extensions and services';
                 Image = Payables;
-                Visible = false;
+                Visible = true;
 
                 action("Vendors AP Pay")
                 {
@@ -567,6 +580,11 @@ page 50084 "INT_AC Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
+                }
                 action("Report Account Receivable")
                 {
                     //ToolTip = 'Setup AppName';
@@ -581,7 +599,7 @@ page 50084 "INT_AC Role Center"
                 Caption = 'Create FA';
                 //ToolTip = 'XXX';
                 Image = Setup;
-                Visible = false;
+                Visible = true;
 
                 action("Fixed Assets Cre FA")
                 {
@@ -710,9 +728,10 @@ page 50084 "INT_AC Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")
@@ -777,6 +796,21 @@ page 50084 "INT_AC Role Center"
                     ApplicationArea = Basic, Suite;
                     Caption = 'G/L Registers';
                 }
+
+                action("INT_Report G/L")
+                {
+                    Caption = 'Report G/L';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('GL'));
+                }
+                action("INT_Update Gen. Ledger Entriese")
+                {
+                    RunObject = Page "INT_Gen. Ledger Entries Update";
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Update Gen. Ledger Entries';
+                }
+
             }
             group(Setup)
             {

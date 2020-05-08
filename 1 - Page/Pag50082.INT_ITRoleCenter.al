@@ -6,8 +6,10 @@ page 50082 "INT_IT Role Center"
     layout
     {
 
+
         area(RoleCenter)
         {
+
 
             part(Headline; "Headline RC Accountant")
             {
@@ -18,6 +20,15 @@ page 50082 "INT_IT Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+
+            }
+
+
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -31,6 +42,7 @@ page 50082 "INT_IT Role Center"
                 ApplicationArea = Basic, Suite;
             }
 
+
             /*
             chartpart(mychart; "Q5400-01")
             {
@@ -38,12 +50,16 @@ page 50082 "INT_IT Role Center"
                 Visible = true;
             }
             */
+
+
+
         }
 
     }
 
     actions
     {
+
         /*area(Creation)
         {
             action(AppNameDocumentCard)
@@ -577,6 +593,11 @@ page 50082 "INT_IT Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
+                }
                 action("Report Account Receivable")
                 {
                     //ToolTip = 'Setup AppName';
@@ -715,11 +736,20 @@ page 50082 "INT_IT Role Center"
                     ApplicationArea = Basic, Suite;
                     Caption = 'Analysis by Dimensions';
                 }
+                /*
                 action("Report Budget")
                 {
                     RunObject = Report Budget;
                     ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                }
+                */
+                action("Report Budget")
+                {
+                    Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")

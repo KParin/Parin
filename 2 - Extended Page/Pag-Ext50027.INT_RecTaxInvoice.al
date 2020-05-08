@@ -55,7 +55,7 @@ pageextension 50027 "INT_RecTaxInvoice" extends "AVF_Receipt/Tax Invoice"
             Visible = false;
         }
 
-    }    
+    }
 
     actions
     {
@@ -109,11 +109,13 @@ pageextension 50027 "INT_RecTaxInvoice" extends "AVF_Receipt/Tax Invoice"
             Visible = false;
         }
 
+        /*
         modify("FNAR002_Post to Cash Receipt Journal")
         {
             Visible = false;
             Promoted = false;
         }
+        */
 
     }
 

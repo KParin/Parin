@@ -201,12 +201,18 @@ pageextension 50128 "INT_Payment Journal" extends "Payment Journal"
         }
         modify(Post)
         {
+            //AVPKJINT.001 20/01/2020 Add code for run report after post
+            trigger OnBeforeAction()
+            begin
+                CLEAR(AVDoc);
+                AVDoc := "Document No.";
+            end;
+            //C-AVPKJINT.001 20/01/2020
+
             trigger OnAfterAction()
             begin
                 //AVPKJINT.001 29/11/2019
                 //Add code for run report payment journal after post payment journal
-                CLEAR(AVDoc);
-                AVDoc := "Document No.";
                 JournalBatchNameForReport := GETRANGEMAX("Journal Batch Name");
                 CurrentJnlBatchName := GETRANGEMAX("Journal Batch Name");
                 CurrPage.UPDATE(FALSE);
@@ -214,11 +220,15 @@ pageextension 50128 "INT_Payment Journal" extends "Payment Journal"
                 IF CurrentJnlBatchName <> AVDoc THEN BEGIN
                     CLEAR(recGLEntry);
                     recGLEntry.SETRANGE("Journal Batch Name", JournalBatchNameForReport);
-                    REPORT.RUN(REPORT::"INT_Payment Voucher", TRUE, FALSE, recGLEntry)
+                    recGLEntry.SetRange("Document No.", AVDoc);
+                    if recGLEntry.FindFirst() then
+                        REPORT.RUN(REPORT::"INT_Payment Voucher", TRUE, FALSE, recGLEntry)
                 END;
                 //C-AVPKJINT.001 29/11/2019
             end;
         }
+
+
     }
 
     var

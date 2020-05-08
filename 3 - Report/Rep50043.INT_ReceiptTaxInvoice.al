@@ -228,7 +228,7 @@ report 50043 "INT_Receipt Tax Invoice"
                             end else
                                 AmtInv := 0;
 
-                            DescInv := "Sales Invoice Line".Description + ' ' + "Sales Invoice Line"."Description 2";
+                            DescInv := "Sales Invoice Line".Description;
                             ShowLineInv := true;
                             //CountLine += 1;
                             AMT += AmtInv;
@@ -283,7 +283,7 @@ report 50043 "INT_Receipt Tax Invoice"
                             end else
                                 AmtCr := 0;
 
-                            DescCr := "Sales Cr.Memo Line".Description + ' ' + "Sales Cr.Memo Line"."Description 2";
+                            DescCr := "Sales Cr.Memo Line".Description;
                             ShowLineCr := true;
                             //CountLine += 1;
                             AMT += AmtCr;

@@ -25,6 +25,8 @@ pageextension 50100 "INT_Customer List" extends "Customer List"
                 ApplicationArea = All;
             }
         }
+
+
     }
     actions
     {

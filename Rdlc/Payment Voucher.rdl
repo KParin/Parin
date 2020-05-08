@@ -3715,44 +3715,6 @@ Fields!DocDate.Value</Value>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox33">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Page : </Value>
-                      <Style>
-                        <FontFamily>CordiaUPC</FontFamily>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                    <TextRun>
-                      <Value>=Globals!PageNumber</Value>
-                      <Style>
-                        <FontFamily>CordiaUPC</FontFamily>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox33</rd:DefaultName>
-              <Top>2.12412cm</Top>
-              <Left>16.16177cm</Left>
-              <Height>0.6cm</Height>
-              <Width>4.20278cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-              </Style>
-            </Textbox>
             <Rectangle Name="Rectangle1">
               <ReportItems>
                 <Textbox Name="Textbox34">
@@ -4580,7 +4542,6 @@ Fields!DocDate.Value</Value>
               <Left>0.67073cm</Left>
               <Height>1.9932cm</Height>
               <Width>19.65854cm</Width>
-              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -4626,7 +4587,7 @@ Fields!DocDate.Value</Value>
               <Top>0.05302cm</Top>
               <Height>0.05036cm</Height>
               <Width>0.38333cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Visibility>
                 <Hidden>=code.SetData(ReportItems!Header.Value,1)</Hidden>
               </Visibility>
@@ -4664,7 +4625,7 @@ Fields!DocDate.Value</Value>
               <Left>5.15982cm</Left>
               <Height>0.8237cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4697,7 +4658,7 @@ Fields!DocDate.Value</Value>
               <Left>5.15982cm</Left>
               <Height>0.59974cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4730,7 +4691,7 @@ Fields!DocDate.Value</Value>
               <Left>5.15982cm</Left>
               <Height>0.76259cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

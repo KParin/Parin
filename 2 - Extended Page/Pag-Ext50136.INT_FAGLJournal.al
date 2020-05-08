@@ -31,10 +31,12 @@ pageextension 50136 "INT_FA GL Journal" extends "Fixed Asset G/L Journal"
         {
             Visible = false;
         }
+        /*
         modify("Shortcut Dimension 2 Code")
         {
             Visible = false;
         }
+        */
         modify("Bal. Gen. Bus. Posting Group")
         {
             Visible = false;
@@ -53,6 +55,7 @@ pageextension 50136 "INT_FA GL Journal" extends "Fixed Asset G/L Journal"
                 Width = 11;
             }
         }
+
         modify("Depr. Acquisition Cost")
         {
             Visible = false;
@@ -178,6 +181,7 @@ pageextension 50136 "INT_FA GL Journal" extends "Fixed Asset G/L Journal"
         }
         modify("P&ost")
         {
+            Promoted = false;
             //AVWNFINT.001 17/12/2019
             //Add code for run report after post
             trigger OnBeforeAction()
@@ -204,6 +208,75 @@ pageextension 50136 "INT_FA GL Journal" extends "Fixed Asset G/L Journal"
             end;
             //C-AVWNFINT.001 29/11/2019
         }
+
+        addbefore("P&ost")
+        {
+            action("INT_Preview")
+            {
+                ApplicationArea = FixedAssets;
+                Caption = 'Preview Posting';
+                Image = ViewPostedOrder;
+                ToolTip = 'Review the different types of entries that will be created when you post the document or journal.';
+
+                trigger OnAction()
+                var
+                    GenJnlPost: Codeunit "Gen. Jnl.-Post";
+                begin
+                    GenJnlPost.Preview(Rec);
+                end;
+            }
+        }
+        modify(Preview)
+        {
+            Visible = false;
+        }
+
+        addafter(Dimensions)
+        {
+            action("INT_ValidateDimTransactionType")
+            {
+                ApplicationArea = All;
+                Promoted = true;
+                PromotedCategory = Process;
+                Caption = 'Validate Transaction Type';
+                Image = UpdateDescription;
+
+                trigger OnAction()
+                begin
+                    /*
+                    if "Account Type" = "Account Type"::"Fixed Asset" then begin
+                        if "FA Posting Type" = "FA Posting Type"::Depreciation then begin
+                            DefaultShortcutDimCode5 := '060';
+                            ValidateShortcutDimCode(5, DefaultShortcutDimCode5);
+                        end;
+                    end;
+                    */
+
+                    JournalBatchNameForReport := GETRANGEMAX("Journal Batch Name");
+                    CurrentJnlBatchName := GETRANGEMAX("Journal Batch Name");
+
+                    Clear(GenJnlLine);
+                    GenJnlLine.SetCurrentKey("Journal Batch Name", "Journal Template Name");
+                    GenJnlLine.SetRange("Journal Template Name", 'ASSETS');
+                    GenJnlLine.SetRange("Journal Batch Name", CurrentJnlBatchName);
+                    if GenJnlLine.Find('-') then begin
+                        repeat
+                            if GenJnlLine."Account Type" = GenJnlLine."Account Type"::"Fixed Asset" then begin
+                                if GenJnlLine."FA Posting Type" = GenJnlLine."FA Posting Type"::Depreciation then begin
+                                    DefaultShortcutDimCode5 := '060';
+                                    GenJnlLine.ValidateShortcutDimCode(5, DefaultShortcutDimCode5);
+                                    GenJnlLine.Modify;
+                                end;
+                            end;
+                        until GenJnlLine.Next = 0;
+                    end;
+
+                    Message('Validate Transaction Type Complete.');
+                end;
+
+            }
+        }
+
     }
     var
         GenJnlLine: Record "Gen. Journal Line";

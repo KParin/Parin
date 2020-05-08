@@ -169,6 +169,12 @@ pageextension 50118 "INT_Fixed Asset Card" extends "Fixed Asset Card"
             Visible = false;
         }
     }
+
+    trigger OnClosePage()
+    begin
+        TestField("Global Dimension 1 Code");
+    end;
+
     var
         FADepreBookTB: Record "FA Depreciation Book";
 }

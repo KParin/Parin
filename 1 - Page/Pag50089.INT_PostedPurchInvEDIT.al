@@ -337,6 +337,14 @@ page 50089 "INT_Posted Purch. Inv. EDIT"
                 {
                     ApplicationArea = All;
                 }
+                field("INT_Type of Tax"; "INT_Type of Tax")
+                {
+                    ApplicationArea = All;
+                }
+                field("INT_ID No."; "INT_ID No.")
+                {
+                    ApplicationArea = All;
+                }
             }
         }
         area(factboxes)

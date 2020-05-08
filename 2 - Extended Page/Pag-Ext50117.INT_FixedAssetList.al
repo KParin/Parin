@@ -1,5 +1,6 @@
 pageextension 50117 "INT_Fixed Asset List" extends "Fixed Asset List"
 {
+    Editable = true;
     layout
     {
         moveafter("FA Location Code"; "Responsible Employee")

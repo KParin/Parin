@@ -16,6 +16,11 @@ page 50085 "INT_AC-MA Role Center"
             {
                 ApplicationArea = Basic, Suite;
             }
+            part(GenericChart; "Generic Chart")
+            {
+                ApplicationArea = Basic, Suite;
+                Visible = true;
+            }
             part("Finance Performance"; "Finance Performance")
             {
                 ApplicationArea = Basic, Suite;
@@ -567,6 +572,11 @@ page 50085 "INT_AC-MA Role Center"
                     ApplicationArea = Basic, Suite;
 
                 }
+                action("Customer Invoice No.")
+                {
+                    RunObject = page "AVF_Update Customer Inv. No.";
+                    ApplicationArea = Basic, Suite;
+                }
                 action("Report Account Receivable")
                 {
                     //ToolTip = 'Setup AppName';
@@ -710,9 +720,10 @@ page 50085 "INT_AC-MA Role Center"
                 }
                 action("Report Budget")
                 {
-                    RunObject = Report Budget;
-                    ApplicationArea = Basic, Suite;
                     Caption = 'Report Budget';
+                    RunObject = Page "AVF_Object Report List";
+                    ApplicationArea = Basic, Suite;
+                    RunPageView = where("Group Report Filter" = const('Budget'));
                 }
             }
             group("G/L Account")

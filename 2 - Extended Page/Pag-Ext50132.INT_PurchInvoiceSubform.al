@@ -82,7 +82,8 @@ pageextension 50132 "INT_Purch. Invoice Subform" extends "Purch. Invoice Subform
         {
             Visible = false;
         }
-        addafter("Direct Unit Cost")
+
+        addafter("Line Amount")
         {
             field("INT_Line Discount Amount"; "Line Discount Amount")
             {
@@ -107,17 +108,56 @@ pageextension 50132 "INT_Purch. Invoice Subform" extends "Purch. Invoice Subform
         {
             Visible = false;
         }
-        addafter(ShortcutDimCode8)
+
+
+        moveafter("Line Discount Amount"; "Line Discount %")
+
+        addbefore("AVF_Gen. Prod. Posting Group")
         {
             field("INT_Depreciation Book Code"; "Depreciation Book Code")
+            {
+                ApplicationArea = All;
+            }
+            field("INT_Duplicate in Depreciation Book"; "Duplicate in Depreciation Book")
             {
                 ApplicationArea = All;
             }
 
         }
 
+        addafter(ShortcutDimCode8)
+        {
+            field("INT_FA Posting Type"; "FA Posting Type")
+            {
+                ApplicationArea = All;
+            }
+        }
+
+
     }
     actions
     {
+        addafter("&Line")
+        {
+            group("INT_DimensionsGroup")
+            {
+                Caption = 'Dimensions';
+                action("INT_Dimensions")
+                {
+                    AccessByPermission = TableData Dimension = R;
+                    ApplicationArea = Dimensions;
+                    Caption = 'Dimensions';
+                    Image = Dimensions;
+                    Scope = Repeater;
+                    ShortCutKey = 'Alt+D';
+                    ToolTip = 'View or edit dimensions, such as area, project, or department, that you can assign to sales and purchase documents to distribute costs and analyze transaction history.';
+
+                    trigger OnAction()
+                    begin
+                        ShowDimensions;
+                    end;
+                }
+            }
+        }
     }
 }

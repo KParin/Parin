@@ -19,12 +19,12 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>19.46413cm</Width>
+                  <Width>19.53781cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>8.76299cm</Height>
+                  <Height>9.38687cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -2856,282 +2856,18 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
                                               <PaddingRight>2pt</PaddingRight>
                                             </Style>
                                           </Textbox>
+                                          <ColSpan>10</ColSpan>
                                         </CellContents>
                                       </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox137">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox137</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox2">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox2</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox3">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox3</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox4">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox4</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox127">
-                                            <CanGrow>true</CanGrow>
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox127</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox5">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox5</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox6">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox6</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox14">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style>
-                                                  <TextAlign>Right</TextAlign>
-                                                </Style>
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox14</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
-                                      <TablixCell>
-                                        <CellContents>
-                                          <Textbox Name="Textbox15">
-                                            <KeepTogether>true</KeepTogether>
-                                            <Paragraphs>
-                                              <Paragraph>
-                                                <TextRuns>
-                                                  <TextRun>
-                                                    <Value />
-                                                    <Style>
-                                                      <FontFamily>CordiaUPC</FontFamily>
-                                                      <FontSize>12pt</FontSize>
-                                                    </Style>
-                                                  </TextRun>
-                                                </TextRuns>
-                                                <Style />
-                                              </Paragraph>
-                                            </Paragraphs>
-                                            <rd:DefaultName>Textbox15</rd:DefaultName>
-                                            <Style>
-                                              <Border>
-                                                <Style>None</Style>
-                                              </Border>
-                                              <PaddingLeft>2pt</PaddingLeft>
-                                              <PaddingRight>2pt</PaddingRight>
-                                              <PaddingTop>2pt</PaddingTop>
-                                              <PaddingBottom>2pt</PaddingBottom>
-                                            </Style>
-                                          </Textbox>
-                                        </CellContents>
-                                      </TablixCell>
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
+                                      <TablixCell />
                                     </TablixCells>
                                   </TablixRow>
                                 </TablixRows>
@@ -3258,6 +2994,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
                                 </TablixMembers>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
+                              <Left>0.02901in</Left>
                               <Height>5.85585cm</Height>
                               <Width>19.4608cm</Width>
                               <Style>
@@ -4762,7 +4499,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
                                 </TablixMembers>
                               </TablixRowHierarchy>
                               <DataSetName>DataSet_Result</DataSetName>
-                              <Top>5.52132cm</Top>
+                              <Top>6.1452cm</Top>
                               <Height>3.24167cm</Height>
                               <Width>19.46413cm</Width>
                               <ZIndex>1</ZIndex>
@@ -4807,8 +4544,8 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
             <Left>0.67945cm</Left>
-            <Height>8.76299cm</Height>
-            <Width>19.46413cm</Width>
+            <Height>9.38687cm</Height>
+            <Width>19.53781cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -4816,7 +4553,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>8.76299cm</Height>
+        <Height>9.38687cm</Height>
         <Style />
       </Body>
       <Width>20.77549cm</Width>
@@ -4826,37 +4563,6 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="Textbox9">
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>="Page :" &amp; Globals!PageNumber</Value>
-                      <Style>
-                        <FontFamily>CordiaUPC</FontFamily>
-                        <FontSize>12pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox7</rd:DefaultName>
-              <Top>1.859cm</Top>
-              <Left>16.4634cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.75957cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox10">
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -4879,7 +4585,6 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>0.67945cm</Left>
               <Height>0.49417cm</Height>
               <Width>0.79344cm</Width>
-              <ZIndex>1</ZIndex>
               <Visibility>
                 <Hidden>=code.setdata(ReportItems!Header.Value,1)</Hidden>
               </Visibility>
@@ -4915,7 +4620,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>17.58757cm</Left>
               <Height>0.57589cm</Height>
               <Width>3.18792cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4947,7 +4652,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>17.58757cm</Left>
               <Height>0.57589cm</Height>
               <Width>3.18792cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4959,8 +4664,8 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Top>4.07141cm</Top>
               <Left>0.67945cm</Left>
               <Height>0cm</Height>
-              <Width>19.38142cm</Width>
-              <ZIndex>4</ZIndex>
+              <Width>19.76317cm</Width>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -5002,7 +4707,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>0.67945cm</Left>
               <Height>0.6cm</Height>
               <Width>1.83854cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5034,8 +4739,8 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Top>4.19841cm</Top>
               <Left>1.90945cm</Left>
               <Height>0.57589cm</Height>
-              <Width>6.15365cm</Width>
-              <ZIndex>6</ZIndex>
+              <Width>11.081cm</Width>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5067,7 +4772,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>3.31174cm</Left>
               <Height>0.6cm</Height>
               <Width>4.75136cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5096,10 +4801,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.19841cm</Top>
-              <Left>11.85146cm</Left>
+              <Left>15.05821cm</Left>
               <Height>0.57589cm</Height>
               <Width>2.73236cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5128,10 +4833,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.19841cm</Top>
-              <Left>14.58382cm</Left>
+              <Left>17.80713cm</Left>
               <Height>0.57589cm</Height>
-              <Width>6.08264cm</Width>
-              <ZIndex>9</ZIndex>
+              <Width>2.63549cm</Width>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5166,7 +4871,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>16.4634cm</Left>
               <Height>0.57589cm</Height>
               <Width>1.12417cm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5198,7 +4903,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>15.55339cm</Left>
               <Height>0.57589cm</Height>
               <Width>2.03418cm</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5230,7 +4935,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>5.14927cm</Left>
               <Height>1.2cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>12</ZIndex>
+              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5264,7 +4969,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>5.14927cm</Left>
               <Height>1.2cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>13</ZIndex>
+              <ZIndex>12</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5297,7 +5002,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>5.14927cm</Left>
               <Height>1.2cm</Height>
               <Width>10.96667cm</Width>
-              <ZIndex>14</ZIndex>
+              <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5327,7 +5032,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>0.67945cm</Left>
               <Height>0.6cm</Height>
               <Width>2.73812cm</Width>
-              <ZIndex>15</ZIndex>
+              <ZIndex>14</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5357,10 +5062,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.19841cm</Top>
-              <Left>8.01018cm</Left>
+              <Left>12.99493cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.32507cm</Width>
-              <ZIndex>16</ZIndex>
+              <Width>0.9757cm</Width>
+              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5392,8 +5097,8 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Top>4.7743cm</Top>
               <Left>8.01018cm</Left>
               <Height>0.58884cm</Height>
-              <Width>2.2404cm</Width>
-              <ZIndex>17</ZIndex>
+              <Width>0.9704cm</Width>
+              <ZIndex>16</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5424,10 +5129,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.19841cm</Top>
-              <Left>10.25058cm</Left>
+              <Left>13.99708cm</Left>
               <Height>0.6cm</Height>
-              <Width>1.5268cm</Width>
-              <ZIndex>18</ZIndex>
+              <Width>1.02409cm</Width>
+              <ZIndex>17</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5459,10 +5164,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>4.7743cm</Top>
-              <Left>10.25058cm</Left>
+              <Left>9.01233cm</Left>
               <Height>0.58884cm</Height>
               <Width>1.5268cm</Width>
-              <ZIndex>19</ZIndex>
+              <ZIndex>18</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5497,7 +5202,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>15.51811cm</Left>
               <Height>0.57589cm</Height>
               <Width>2.03418cm</Width>
-              <ZIndex>20</ZIndex>
+              <ZIndex>19</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5537,7 +5242,7 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               <Left>17.62285cm</Left>
               <Height>0.57589cm</Height>
               <Width>3.11736cm</Width>
-              <ZIndex>21</ZIndex>
+              <ZIndex>20</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5563,10 +5268,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.7743cm</Top>
-              <Left>11.85146cm</Left>
+              <Left>10.61321cm</Left>
               <Height>0.6cm</Height>
               <Width>1.96507cm</Width>
-              <ZIndex>22</ZIndex>
+              <ZIndex>21</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5604,10 +5309,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.75666cm</Top>
-              <Left>13.8736cm</Left>
+              <Left>12.63535cm</Left>
               <Height>0.58589cm</Height>
               <Width>1.09771cm</Width>
-              <ZIndex>23</ZIndex>
+              <ZIndex>22</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5636,10 +5341,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox81</rd:DefaultName>
               <Top>4.8378cm</Top>
-              <Left>14.97131cm</Left>
+              <Left>13.73306cm</Left>
               <Height>0.58884cm</Height>
               <Width>1.84865cm</Width>
-              <ZIndex>24</ZIndex>
+              <ZIndex>23</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -5667,10 +5372,10 @@ Fields!ShowCurrRate.Value+Chr(177)+Fields!PurchInvHeader_DueDate.Value+Chr(177)+
               </Paragraphs>
               <rd:DefaultName>Textbox7</rd:DefaultName>
               <Top>4.8378cm</Top>
-              <Left>16.81996cm</Left>
+              <Left>15.58171cm</Left>
               <Height>0.58884cm</Height>
-              <Width>3.84651cm</Width>
-              <ZIndex>25</ZIndex>
+              <Width>4.86092cm</Width>
+              <ZIndex>24</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

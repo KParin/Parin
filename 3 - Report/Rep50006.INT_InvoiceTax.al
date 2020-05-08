@@ -59,13 +59,13 @@ report 50006 "INT_Invoice/Tax"
             column(BilltoName_TaxInvoiceHeader; "Tax Invoice Header"."Bill-to Name")
             {
             }
-            column(BilltoAddress_TaxInvoiceHeader; "Tax Invoice Header"."Bill-to Address")
+            column(BilltoAddress_TaxInvoiceHeader; "Tax Invoice Header"."Sell-to Address")
             {
             }
-            column(BilltoAddress2_TaxInvoiceHeader; "Tax Invoice Header"."Bill-to Address 2")
+            column(BilltoAddress2_TaxInvoiceHeader; "Tax Invoice Header"."Sell-to Address 2")
             {
             }
-            column(BilltoAddress3_TaxInvoiceHeader; "Tax Invoice Header"."AVF_Bill-to Address 3")
+            column(BilltoAddress3_TaxInvoiceHeader; "Tax Invoice Header"."AVF_Sell-to Address 3")
             {
             }
             column(Customer_PhoneNo; Customer."Phone No.")
@@ -74,7 +74,7 @@ report 50006 "INT_Invoice/Tax"
             column(Customer_FaxNo; Customer."Fax No.")
             {
             }
-            column(Customer_VATRegistrationNo; Customer."VAT Registration No.")
+            column(Customer_VATRegistrationNo; "Tax Invoice Header"."VAT Registration No.")
             {
             }
             column(No_TaxInvoiceHeader; "Tax Invoice Header"."No.")

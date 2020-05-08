@@ -11,7 +11,7 @@ report 50010 "INT_Data For HFM"
         dataitem("G/L Account"; "G/L Account")
         {
             DataItemTableView = SORTING("No.") WHERE("Account Type" = CONST(Posting));
-            RequestFilterFields = "No.", "Account Type", "Date Filter", "Global Dimension 1 Filter", "Global Dimension 2 Filter";
+            RequestFilterFields = "No.", "Account Type", "Global Dimension 1 Filter", "Global Dimension 2 Filter";
 
             column(STRSUBSTNO_Text000_PeriodText_; STRSUBSTNO(Text000, PeriodText))
             {
@@ -35,6 +35,9 @@ report 50010 "INT_Data For HFM"
             {
             }
             column(GLAccNoAndDepCode; GLAccNoAndDepCode + FixBlank2)
+            {
+            }
+            column(GLAccNo; "G/L Account"."No.")
             {
             }
             column(SCC; 'SCC' + FixBlank1)
@@ -119,6 +122,9 @@ report 50010 "INT_Data For HFM"
             {
             }
             column(Net_Change; "Net Change")
+            {
+            }
+            column(CountAccount; CountAccount)
             {
             }
 
@@ -252,14 +258,34 @@ report 50010 "INT_Data For HFM"
                     CLEAR(FilterDepCode);
                     CLEAR(FilterGlobal2Code);
                     Clear(FilterGlobal2CodeShow);
-                    Clear(Net_ChangeShow);
 
-                    IF CountAccount = 1 THEN
-                        FilterDepCode := ''
-                    ELSE
+
+                    /*
+                    if (CopyStr("G/L Account"."No.", 1, 1) = '0') or (CopyStr("G/L Account"."No.", 1, 1) = '1') then begin
+                        FilterDepCode := '';
+                        FilterGlobal2Code := '';
+                    end;
+                    */
+
+
+                    IF CountAccount = 1 THEN begin
+                        FilterDepCode := '';
+                        //Net_ChangeShow := '111111';
+                        "G/L Account".SETRANGE("G/L Account"."Global Dimension 1 Filter", FilterDepCode);
+                        "G/L Account".SETRANGE("G/L Account"."Global Dimension 2 Filter", FilterGlobal2Code);
+                        "G/L Account".CALCFIELDS("Net Change", "Balance at Date");
+                        Net_ChangeShow := FORMAT(ABS("G/L Account"."Net Change"), 0, '<Integer><Decimals,3>');
+
+                        if "G/L Account"."Net Change" < 0 then
+                            Sign := '-'
+                        else
+                            Sign := '';
+                    end ELSE
                         IF CountAccount = 2 THEN BEGIN
                             FilterDepCode := TmpDimValue_Dep.Name;
                             FilterGlobal2Code := TmpDimValue_Dep."INT_External Document No.";
+
+
                             //FilterGlobal2CodeShow := FilterGlobal2Code;
                             if (COPYSTR(FORMAT("G/L Account"."No."), 1, 1) = '2')
                                 or (COPYSTR(FORMAT("G/L Account"."No."), 1, 1) = '3')
@@ -268,13 +294,23 @@ report 50010 "INT_Data For HFM"
                                 if FilterGlobal2Code = '' then
                                     FilterGlobal2CodeShow := 'ZZZZ'
                                 else
-                                    FilterGlobal2CodeShow := FilterGlobal2Code;
+                                    FilterGlobal2CodeShow := Copystr(FilterGlobal2Code, 1, 4);
 
                             end else
-                                FilterGlobal2CodeShow := FilterGlobal2Code;
+                                FilterGlobal2CodeShow := Copystr(FilterGlobal2Code, 1, 4);
 
+                            //Net_ChangeShow := '9999';
+                            "G/L Account".CALCFIELDS("Net Change", "Balance at Date");
+                            Net_ChangeShow := FORMAT(ABS("G/L Account"."Net Change"), 0, '<Integer><Decimals,3>');
+
+                            if "G/L Account"."Net Change" < 0 then
+                                Sign := '-'
+                            else
+                                Sign := '';
                         END ELSE
                             IF CountAccount > 2 THEN BEGIN
+
+
                                 TmpDimValue_Dep.NEXT;
                                 FilterDepCode := TmpDimValue_Dep.Name;
                                 FilterGlobal2Code := TmpDimValue_Dep."INT_External Document No.";
@@ -286,17 +322,24 @@ report 50010 "INT_Data For HFM"
                                     if FilterGlobal2Code = '' then
                                         FilterGlobal2CodeShow := 'ZZZZ'
                                     else
-                                        FilterGlobal2CodeShow := FilterGlobal2Code;
+                                        FilterGlobal2CodeShow := Copystr(FilterGlobal2Code, 1, 4);
                                 END else
-                                    FilterGlobal2CodeShow := FilterGlobal2Code;
+                                    FilterGlobal2CodeShow := Copystr(FilterGlobal2Code, 1, 4);
 
+                                //AVPKJINT 19/02/2020
+                                //if (CopyStr("G/L Account"."No.", 1, 1) <> '0') and (CopyStr("G/L Account"."No.", 1, 1) <> '1') then begin
                                 "G/L Account".SETRANGE("G/L Account"."Global Dimension 1 Filter", FilterDepCode);
                                 "G/L Account".SETRANGE("G/L Account"."Global Dimension 2 Filter", FilterGlobal2Code);
+                                //end;
 
                                 "G/L Account".CALCFIELDS("Net Change", "Balance at Date");
                                 Net_ChangeShow := FORMAT(ABS("G/L Account"."Net Change"), 0, '<Integer><Decimals,3>');
+                                //Net_ChangeShow := '555';
                                 BlankLineNo := "G/L Account"."No. of Blank Lines" + 1;
 
+
+                                //Evaluate(NetChangeInt, Net_ChangeShow);
+                                //if NetChangeInt < 0 then
                                 if "G/L Account"."Net Change" < 0 then
                                     Sign := '-'
                                 else
@@ -329,37 +372,22 @@ report 50010 "INT_Data For HFM"
                     Clear(k);
                     Clear(FixBlank3);
                     Clear(FixBlankInt3);
-                    FixBlankInt3 := 4 - StrLen(FilterGlobal2CodeShow);
+                    FixBlankInt3 := 3 - StrLen(FilterGlobal2CodeShow);
                     repeat
                         k += 1;
                         FixBlank3 += ' ';
                     until k >= FixBlankInt3;
-                    //Message('FixBlankInt3 : %1', FixBlankInt3);
+
 
                     Clear(l);
                     Clear(FixBlank4);
                     Clear(FixBlankInt4);
-                    "G/L Account".CALCFIELDS("Net Change");
-                    Net_ChangeShow := FORMAT(ABS("G/L Account"."Net Change"), 0, '<Integer><Decimals,3>');
-                    //Message('len Net_ChangeShow : %1', StrLen(Net_ChangeShow));
 
-                    /*
-                    if FilterDepCode = '' then begin
-                        FixBlankInt4 := 31 - StrLen(Net_ChangeShow);
-                    end else begin
-                        if FilterGlobal2CodeShow = '' then begin
-                            FixBlankInt4 := 26 - StrLen(Net_ChangeShow);
-                        end else begin
-                            if StrLen(FilterGlobal2CodeShow) = 4 then begin
-                                FixBlankInt4 := 16 - StrLen(Net_ChangeShow);
-                            end else begin
-                                FixBlankInt4 := (4 - StrLen(FilterGlobal2CodeShow)) - (17 - StrLen(Net_ChangeShow));
-                            end;
-                        end;
-                    end;
-                    */
-                    //FixBlankInt4 := 17 - StrLen(Net_ChangeShow);
-                    //FixBlankInt4 := 16 - StrLen(Net_ChangeShow);
+                    "G/L Account".CALCFIELDS("Net Change");
+                    //Message("G/L Account".GetFilters);
+                    ///Jaa Net_ChangeShow := FORMAT(ABS("G/L Account"."Net Change"), 0, '<Integer><Decimals,3>');
+                    //Net_ChangeShow := '777';
+                    //Message('len Net_ChangeShow : %1', StrLen(Net_ChangeShow));
 
                     if FilterGlobal2CodeShow = '' then begin
                         FixBlankInt4 := 17 - StrLen(Net_ChangeShow);
@@ -389,6 +417,7 @@ report 50010 "INT_Data For HFM"
                 //E-AVPDB.001 12.06.2014   
 
                 ////////////////////////////////////
+                /*
                 "G/L Account".SetFilter("Date Filter", GetFilter("Date Filter"));
                 Clear(DimValueTradingParter);
                 DimValueTradingParter.SetCurrentKey("Dimension Code", Code);
@@ -410,6 +439,7 @@ report 50010 "INT_Data For HFM"
                     until DimValueTradingParter.Next() = 0;
                 end;
                 ////////////////////////////////////
+                */
 
 
                 //Insert Table Tmp Dimension
@@ -455,20 +485,58 @@ report 50010 "INT_Data For HFM"
                         END;
                     UNTIL DimGloal1.NEXT = 0;
                 END;
+
+
+
+
+                CLEAR(DimGloal2);
+                DimGloal2.SETCURRENTKEY(DimGloal2."Dimension Code");
+                DimGloal2.SETRANGE(DimGloal2."Dimension Code", 'TRADING PARTNERS');
+                //DimGloal2.SETRANGE(Blocked, false);
+                DimGloal2.SetRange("INT_For HFM", true);
+                IF DimGloal2.FIND('-') THEN BEGIN
+                    REPEAT
+                        Running += 1;
+                        TmpDimValue_Dep.INIT;
+                        TmpDimValue_Dep."Dimension Code" := 'COST CENTER';
+                        TmpDimValue_Dep.Code := FORMAT(Running);
+                        TmpDimValue_Dep.Name := '';
+                        TmpDimValue_Dep."INT_External Document No." := DimGloal2.Code;
+                        TmpDimValue_Dep.INSERT;
+
+                    UNTIL DimGloal2.NEXT = 0;
+                END;
+
+
+
             end;
 
             trigger OnAfterGetRecord()
             begin
+
+                //AVPKJINT 20/02/2020
+                if (CopyStr("G/L Account"."No.", 1, 1) = '0') or (CopyStr("G/L Account"."No.", 1, 1) = '1') then
+                    "G/L Account".SetFilter("Date Filter", '..%1', EndDate)
+                else
+                    "G/L Account".SetFilter("Date Filter", '%1..%2', StartDate, EndDate);
+                //C-AVPKJINT 20/02/2020
+
                 IF ChangeGroupNo THEN BEGIN
                     PageGroupNo += 1;
                     ChangeGroupNo := FALSE;
                 END;
 
                 ChangeGroupNo := "New Page";
+
             end;
 
+
+
         }
+
+
     }
+
 
     requestpage
     {
@@ -477,9 +545,13 @@ report 50010 "INT_Data For HFM"
         {
             area(Content)
             {
-                group(GroupName)
+                field("Start Date"; StartDate)
                 {
-
+                    Caption = 'Start Date';
+                }
+                field("End Date"; EndDate)
+                {
+                    Caption = 'End Date';
                 }
             }
         }
@@ -498,13 +570,42 @@ report 50010 "INT_Data For HFM"
     }
 
     trigger OnPreReport()
+    var
+        DimValueTB: Record "Dimension Value";
+        GLEntryTB: Record "G/L Entry";
     begin
+        if StartDate = 0D then
+            Error('Start Date must not be blank.');
+        if EndDate = 0D then
+            Error('End Date must not be blank.');
+
         GLFilter := "G/L Account".GETFILTERS;
         PeriodText := "G/L Account".GETFILTER("Date Filter");
         TxtFilter := "G/L Account".GETFILTER("G/L Account"."Global Dimension 1 Filter");
 
         IF PrintToExcel THEN
             MakeExcelInfo;
+
+
+        Clear(DimValueTB);
+        DimValueTB.SetCurrentKey("Dimension Code", Code);
+        DimValueTB.SetRange("Dimension Code", 'TRADING PARTNERS');
+        if DimValueTB.Find('-') then begin
+            repeat
+                Clear(GLEntryTB);
+                GLEntryTB.SetCurrentKey("Global Dimension 2 Code");
+                GLEntryTB.SetRange("Global Dimension 2 Code", DimValueTB.Code);
+                GLEntryTB.SetFilter("Posting Date", PeriodText);
+                if GLEntryTB.FindFirst then begin
+                    DimValueTB."INT_For HFM" := true;
+                    DimValueTB.Modify;
+                end else begin
+                    DimValueTB."INT_For HFM" := false;
+                    DimValueTB.Modify;
+                end;
+            until DimValueTB.Next = 0;
+        end;
+
     end;
 
     trigger OnPostReport()
@@ -516,6 +617,7 @@ report 50010 "INT_Data For HFM"
     end;
 
     var
+        NetChangeInt: Integer;
         DimValueTradingParter: Record "Dimension Value";
         TraddingPartnersCode: Code[20];
         Text000: TextConst ENU = 'Period: %1';
@@ -585,6 +687,8 @@ report 50010 "INT_Data For HFM"
         SCC: Text[3];
         GLAccNoAndDepCode: Text[100];
         Sign: text[1];
+        StartDate: Date;
+        EndDate: Date;
 
 
     procedure MakeExcelInfo()

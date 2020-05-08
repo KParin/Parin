@@ -135,8 +135,8 @@ pageextension 50106 "INT_Sales Invoice" extends "Sales Invoice"
         {
             trigger OnAfterValidate()
             begin
-                if "Due Date" < WorkDate then
-                    Error('Due Date must more than Current Date!');
+                if "Due Date" < "Posting Date" then
+                    Error('Due Date must more than Posting Date');
             end;
         }
         modify("Sell-to Customer Name")

@@ -123,8 +123,8 @@ pageextension 50108 "INT_Sales Credit Memo" extends "Sales Credit Memo"
             field("INT_Posting No. Series"; "Posting No. Series")
             {
                 ApplicationArea = All;
-                Visible = true;
-                Editable = true;
+                Visible = false;
+                Editable = false;
             }
         }
         modify("Work Description")

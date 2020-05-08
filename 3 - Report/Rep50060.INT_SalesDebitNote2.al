@@ -384,7 +384,7 @@ report 50060 "INT_Sales Debit Note 2"
                         //CopyText := STRSUBSTNO(Text003,CopyText[]);
                         OutputNo += 1;
                     END;
-                    CurrReport.PAGENO := 1;
+                    //CurrReport.PAGENO := 1;
                     CLEAR(AllLine);
                     CLEAR(RunningNo);
                     CLEAR(Line);
